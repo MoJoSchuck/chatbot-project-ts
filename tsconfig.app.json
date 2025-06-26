@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "allowJs": true,
 
-    /* Bundler mode */
+    /* Bundler Mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
