@@ -1,14 +1,30 @@
 import { useState } from 'react'
 import { Chatbot } from 'supersimpledev'
+import type { JSX } from 'react'
 import dayjs from 'dayjs'
 import LoadingImage from '../assets/react-basics.gif'
 import './ChatInput.css'
 
-export function ChatInput({ chatMessages, setChatMessages }) {
+type ChatInputProps = {
+    chatMessages: {
+        id: string;
+        message: string | JSX.Element;
+        sender: string;
+        time: number;
+    }[];
+    setChatMessages: (chatMessages: {
+        message: string | JSX.Element;
+        sender: string;
+        id: string;
+        time?: number;
+    }[]) => void;
+}
+
+export function ChatInput({ chatMessages, setChatMessages }: ChatInputProps) {
     const [inputText, setInputText] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    function saveInputText(event) {
+    function saveInputText(event: React.ChangeEvent<HTMLInputElement>) {
         setInputText(event.target.value);
     }
 
@@ -54,7 +70,7 @@ export function ChatInput({ chatMessages, setChatMessages }) {
         setIsLoading(false);
     }
 
-    function handleKeyDown() {
+    function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
         if (event.key === 'Enter') {
             sendMessage();
         } else if (event.key === 'Escape') {
@@ -70,7 +86,7 @@ export function ChatInput({ chatMessages, setChatMessages }) {
         <div className="chat-input-container">
             <input
                 placeholder="Send a message to Chatbot"
-                size="30"
+                size={30}
                 onChange={saveInputText}
                 value={inputText}
                 onKeyDown={handleKeyDown}
