@@ -5,7 +5,7 @@ A clean and modern chatbot frontend built with **React**.
 
 ## 🚀 Live Demo
 
-👉 [Click here to open the app](https://mojoschuck.github.io/chatbot-project/)
+👉 [Click here to open the app](https://mojoschuck.github.io/chatbot-project-ts/)
 
 ---
 
@@ -13,7 +13,6 @@ A clean and modern chatbot frontend built with **React**.
 
 - ⚛️ [React](https://reactjs.org/) – UI Library
 - ⚡ [Vite](https://vitejs.dev/) – Build Tool
-- 🧠 [SuperSimpleDev Chatbot API](https://supersimple.dev/projects/chatbot) – Simulated bot (coin flip, date, dice roll)
 - 🎨 CSS – Styling
 - 🌐 [GitHub Pages](https://pages.github.com/) – Deployment
 
@@ -26,14 +25,14 @@ A clean and modern chatbot frontend built with **React**.
 ├── src/
 │   ├── assets/         # Images, GIFs, icons
 │   ├── components/     # React components (ChatMessage, ChatInput, etc.)
-│   ├── App.jsx         # Main component
-│   ├── main.jsx        # Entry point
+│   ├── App.tsx         # Main component
+│   ├── main.tsx        # Entry point
 │   ├── App.css         # Component styles
 │   └── index.css       # Global styles
 ├── dist/               # Auto-generated build output
 ├── index.html
 ├── package.json
-├── vite.config.js
+├── vite.config.ts
 ```
 
 ---
@@ -42,8 +41,8 @@ A clean and modern chatbot frontend built with **React**.
 
 ```bash
 # Clone the repository
-git clone https://github.com/mojoschuck/chatbot-project.git
-cd chatbot-project
+git clone https://github.com/mojoschuck/chatbot-project-ts.git
+cd chatbot-project-ts
 
 # Install dependencies
 npm install
@@ -75,7 +74,7 @@ This script:
 - Pushes `dist/` to the `gh-pages` branch
 - Updates your GitHub Pages site
 
-> The `vite.config.js` file is already configured with the correct `base` path.
+> The `vite.config.ts` file is already configured with the correct `base` path.
 
 ---
 
