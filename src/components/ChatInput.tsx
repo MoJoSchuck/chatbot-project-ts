@@ -5,19 +5,16 @@ import dayjs from 'dayjs'
 import LoadingImage from '../assets/react-basics.gif'
 import './ChatInput.css'
 
+type ChatMessages = {
+    message: string | JSX.Element
+    sender: string;
+    id: string;
+    time?: number;
+}[];
+
 type ChatInputProps = {
-    chatMessages: {
-        id: string;
-        message: string | JSX.Element;
-        sender: string;
-        time: number;
-    }[];
-    setChatMessages: (chatMessages: {
-        message: string | JSX.Element;
-        sender: string;
-        id: string;
-        time?: number;
-    }[]) => void;
+    chatMessages: ChatMessages;
+    setChatMessages: (chatMessages: ChatMessages) => void;
 }
 
 export function ChatInput({ chatMessages, setChatMessages }: ChatInputProps) {
